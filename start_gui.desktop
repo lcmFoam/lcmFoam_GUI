@@ -1,0 +1,8 @@
+[Desktop Entry]
+Exec=/home/obertscheider/myOpenFOAM/GUI/start_gui.sh
+Icon=/home/obertscheider/myOpenFOAM/GUI/lcmfoam_icon.png
+Name=startLcmFoamGui
+Terminal=true
+Type=Application
+Path=/home/obertscheider/myOpenFOAM/GUI
+
