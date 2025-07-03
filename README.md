@@ -15,3 +15,5 @@ Tested under Ubuntu.
 
 ## Mesh generation with Gmsh
 Have a look at the video tutorial from https://www.youtube.com/watch?v=zQXUGmNJS6w to see how a structured mesh for thin-walled cavities can be created. A non-structured tetrahedron mesh only works if there is not flow in thickness direction. Anyway the simulation time for structured meshes is must shorter than for tetrahedron meshes.
+
+Mesh must include one or two cellZones (fluid and fluid2; typical use of fluid2 if there is a flow distribution medium on top). Currently, only two cellZones can be addressed via the GUI. Boundary faces must be labelled inlet, wall and outlet. Step-file geometry and Gmsh geo-files are uploaded for demonstration purpose.
