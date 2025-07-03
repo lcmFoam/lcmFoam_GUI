@@ -7,6 +7,8 @@ Tested under Ubuntu.
 - Mesh file in Gmsh format (FPCM16_mesh.msh available)
 - Input for simulation presented at FPCM16 (https://www.researchgate.net/publication/388184799_Improved_Finite_Volume_multiphase_flow_simulation_model_for_strongly_inhomogeneous_porous_media):
 ![image](https://github.com/user-attachments/assets/0f79836c-f3c0-496c-8ef6-30f0b7fe2851)
+![image](https://github.com/user-attachments/assets/d11f568d-5fb3-461a-b41c-584ba8b95eda)
+
 
 ## Usage
 - Copy Python script main1.py, shell script start_gui.sh, icon lcmfoam_icon.png, desktop file start_gui.desktop and mesh file FPCM_mesh.msh in a directory
