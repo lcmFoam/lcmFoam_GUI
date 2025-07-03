@@ -12,3 +12,6 @@ Tested under Ubuntu.
 - Copy Python script main1.py, shell script start_gui.sh, icon lcmfoam_icon.png, desktop file start_gui.desktop and mesh file FPCM_mesh.msh in a directory
 - Copy the desktop file to the desktop and modify the path to the icon and to the start_gui.sh
 - Start the GUI by double clicking on the desktop icon
+
+## Mesh generation with Gmsh
+Have a look at the video tutorial from https://www.youtube.com/watch?v=zQXUGmNJS6w to see how a structured mesh for thin-walled cavities can be created.
