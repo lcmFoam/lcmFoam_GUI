@@ -5,9 +5,15 @@ Tested under Ubuntu.
 
 ## Required input
 - Mesh file in Gmsh format (FPCM16_mesh.msh available)
-- Input for simulation presented at FPCM16 (https://www.researchgate.net/publication/388184799_Improved_Finite_Volume_multiphase_flow_simulation_model_for_strongly_inhomogeneous_porous_media):
-![image](https://github.com/user-attachments/assets/0f79836c-f3c0-496c-8ef6-30f0b7fe2851)
+- Input for simulation presented at FPCM16 (https://www.researchgate.net/publication/388184799_Improved_Finite_Volume_multiphase_flow_simulation_model_for_strongly_inhomogeneous_porous_media). Please see the correlation between the values in the table and the GUI.
+
 ![image](https://github.com/user-attachments/assets/d11f568d-5fb3-461a-b41c-584ba8b95eda)
+
+![image](https://github.com/user-attachments/assets/0f79836c-f3c0-496c-8ef6-30f0b7fe2851)
+
+The results for the two different wall boundary conditions are:
+![image](https://github.com/user-attachments/assets/1a3ea238-bc08-4fc3-befb-2fb4a91bc5b0)
+
 
 
 ## Usage
