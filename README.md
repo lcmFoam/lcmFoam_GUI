@@ -11,7 +11,7 @@ Tested under Ubuntu.
 
 ![image](https://github.com/user-attachments/assets/0f79836c-f3c0-496c-8ef6-30f0b7fe2851)
 
-The filling pattern after 30 s filling time for the two different wall boundary conditions should look like:
+The filling pattern after 30 s filling time for the two different wall boundary conditions should look like this:
 ![image](https://github.com/user-attachments/assets/1a3ea238-bc08-4fc3-befb-2fb4a91bc5b0)
 
 
