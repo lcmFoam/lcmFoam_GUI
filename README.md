@@ -17,6 +17,7 @@ The filling pattern after 30 s filling time for the two different wall boundary 
 
 
 ## Usage
+- Follow the instructions for OpenFoam and lcmFoam solver installation from https://github.com/lcmFoam/lcmFoam24?tab=readme-ov-file#installation-for-openfoam-v2406-on-ubuntu-operating-systems 
 - Copy Python script main1.py, shell script start_gui.sh, icon lcmfoam_icon.png, desktop file start_gui.desktop and mesh file FPCM_mesh.msh in a directory
 - Copy the desktop file to the desktop and modify the path to the icon and to the start_gui.sh
 - Start the GUI by double clicking on the desktop icon
