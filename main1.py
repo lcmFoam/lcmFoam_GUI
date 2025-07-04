@@ -264,14 +264,14 @@ deltaT.insert(0,"1e-9")
 deltaT.grid(row=13, column=2, padx=5, pady=5, ipadx=5)
 
 # dynamic b.c.
-#Slip or dynamic wall b.c.
+#Special wall treatment for wall2
 tk.Label(
     root,
-    text="Wall pressure b.c.:",
+    text="Wall with dynamic b.c.:",
 ).grid(row=11, column=5, padx=5, pady=5, sticky=tk.E)
 pWallType = ttk.Combobox(
     root,
-    values=["Constant value", "Dynamic"],
+    values=["Not present", "With zeroGradient", "With dynamic b.c."],
     state="readonly",
 )
 pWallType.current(0)
@@ -782,6 +782,16 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
     d.write("    wall\n")
     d.write("    {\n")
     d.write("        type            zeroGradient;\n")
@@ -831,6 +841,16 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
     d.write("    wall\n")
     d.write("    {\n")
     d.write("        type            zeroGradient;\n")
@@ -881,6 +901,16 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
     d.write("    wall\n")
     d.write("    {\n")
     d.write("        type            zeroGradient;\n")
@@ -929,6 +959,16 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
     d.write("    wall\n")
     d.write("    {\n")
     d.write("        type            zeroGradient;\n")
@@ -977,6 +1017,16 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")      
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            zeroGradient;\n")
+        d.write("    }\n")  
     d.write("    wall\n")
     d.write("    {\n")
     d.write("        type            zeroGradient;\n")
@@ -1025,8 +1075,8 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
-    if pWallType.get()=="Dynamic":
-        d.write("    wall\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
         d.write("    {\n")
         d.write("        type         codedMixed;\n")
         d.write("        refValue        uniform "+p_init.get()+";\n")
@@ -1048,12 +1098,16 @@ def create_case():
         d.write("                frac[faceI]=1.0-min(max(alpha1.ref()[faceI],0.0),1.0);  //linear transition\n")
         d.write("            }\n")
         d.write("        #};\n")
-        d.write("    }\n")
-    else:
-        d.write("    wall\n")
+        d.write("    }\n")   
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
         d.write("    {\n")
         d.write("        type            zeroGradient;\n")
-        d.write("    }\n")
+        d.write("    }\n")                 
+    d.write("    wall\n")
+    d.write("    {\n")
+    d.write("        type            zeroGradient;\n")
+    d.write("    }\n")
     d.write("    inlet\n")
     d.write("    {\n")
     d.write("            type fixedValue;\n")
@@ -1100,6 +1154,16 @@ def create_case():
     d.write("\n")
     d.write("boundaryField\n")
     d.write("{\n")
+    if pWallType.get()=="With dynamic b.c.":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            slip;\n")
+        d.write("    }\n")  
+    elif pWallType.get()=="With zeroGradient":
+        d.write("    wall2\n")
+        d.write("    {\n")
+        d.write("        type            slip;\n")
+        d.write("    }\n")  
     d.write("    wall\n")
     d.write("    {\n")
     d.write("        type            slip;\n")
