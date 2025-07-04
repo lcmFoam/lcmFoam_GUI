@@ -25,6 +25,6 @@ The filling pattern after 30 s filling time for the two different wall boundary 
 ## Mesh generation with Gmsh
 The free meshing software Gmsh can be downloaded from https://gmsh.info/ 
 
-Have a look at the video tutorial from https://www.youtube.com/watch?v=zQXUGmNJS6w to see how a structured mesh for thin-walled cavities can be created. Mesh must include one or two cellZones (fluid and fluid2; typical use of fluid2 if there is a flow distribution medium on top). Currently, only two cellZones can be addressed via the GUI. Boundary faces must be labelled inlet, wall and outlet. Step-file geometry FPCM16_geometry.stp and Gmsh geo-file FPCM_mesh.geo are uploaded for demonstration purpose.
+Have a look at the video tutorial from https://www.youtube.com/watch?v=zQXUGmNJS6w to see how a structured mesh for thin-walled cavities can be created. Mesh must include one or two cellZones (fluid and fluid2; typical use of fluid2 if there is a flow distribution medium on top). Currently, only two cellZones can be addressed via the GUI. Boundary faces must be labelled inlet, outlet and wall. Optionally, a wall2 boundary can be present where dynamic boundary conditions for transverse flow can be applied. Step-file geometry FPCM16_geometry.stp and Gmsh geo-file FPCM_mesh.geo are uploaded for demonstration purpose.
 
 A non-structured tetrahedron mesh only works if there is not flow in thickness direction. Anyway the simulation time for structured meshes is must shorter than for tetrahedron meshes.
